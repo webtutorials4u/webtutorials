@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Tutorials</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="themes.css" />
+  </head>
+  <body class="dark-theme">
+    <main>
+      <div class="menu" id="menu">
+        <!-- Menu header starts here -->
+        <header>
+          <img src="./logo.png" height="30" width="30" />
+          <h3>Web Tutorials</h3>
+          <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+          <div onclick="toggleMenu()" class="collapse-icon">
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </header>
+        <div class="input-content">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="Search..." />
+        </div>
+
+        <!-- Menu items starts here -->
+        <ul>
+          <li>
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </li>
+          <li><i class="fas fa-comment-alt"></i> <span>Chat</span></li>
+          <li class="active">
+            <i class="fas fa-user-friends"></i> <span>Team</span>
+          </li>
+        </ul>
+        <ul>
+          <li><i class="fas fa-building"></i> <span>Departments</span></li>
+          <li><i class="fas fa-project-diagram"></i> <span>Projects</span></li>
+          <li><i class="fas fa-file-alt"></i> <span>Invoice</span></li>
+        </ul>
+        <ul>
+          <li><i class="fas fa-tasks"></i> <span>Tasks</span></li>
+          <li><i class="fas fa-chart-line"></i> <span>Reports</span></li>
+          <li><i class="fas fa-cog"></i> <span>Settings</span></li>
+        </ul>
+
+        <!-- User Details starts here -->
+        <div class="user">
+          <div class="avatar">
+            <img src="./avatar.png" height="50" width="50" />
+          </div>
+          <div class="user-details">
+            <h4>John Doe</h4>
+            <span>Web Designer</span>
+          </div>
+        </div>
+        <div>
+          <div class="themes">
+            <span class="light" onclick="changeTheme('light-theme')"></span>
+            <span class="dark" onclick="changeTheme('dark-theme')"></span>
+            <span class="purple" onclick="changeTheme('purple-theme')"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      let isToggleMenu = false;
+      function changeTheme(themeColor) {
+        for (let i = 0; i < document.body.classList.length; i++) {
+          const className = document.body.classList[i];
+
+          if (className.endsWith("-theme")) {
+            document.body.classList.remove(className);
+          }
+        }
+
+        document.body.classList.add(themeColor || "light-theme");
+      }
+      function toggleMenu() {
+        if (!isToggleMenu) {
+          document.getElementById("menu").classList.add("menu-responsive");
+        } else {
+          document.getElementById("menu").classList.remove("menu-responsive");
+        }
+        isToggleMenu = !isToggleMenu;
+      }
+    </script>
+  </body>
+</html>

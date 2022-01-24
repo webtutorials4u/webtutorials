@@ -1,0 +1,219 @@
+/**
+* Font awesome css file for displaying icons
+* Google fonts css file for font
+**/
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Muli:300,400,600,700");
+
+html,
+body {
+  font-family: "Muli", "Helvetica Neue", "Arial", "sans-serif";
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #ebf5ff;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 10px;
+  background: var(--primary-color);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+  transition: 0.2s linear all;
+}
+/* Menu Header styles */
+.menu header {
+  display: flex;
+  color: var(--text-color);
+  font-size: 14px;
+  padding-bottom: 10px;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.menu header h3 {
+  margin: 0 15px;
+}
+.menu header .menu-icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+.menu header .collapse-icon {
+  display: none;
+}
+
+/* Menu input styles */
+.input-content {
+  position: relative;
+}
+.input-content i {
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  color: var(--text-color);
+}
+input {
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  width: 80%;
+  outline: none;
+  padding-left: 30px;
+  color: var(--input-text-color);
+  background-color: var(--input-bg-color);
+}
+input::placeholder {
+  color: var(--input-text-color);
+}
+
+/* Menu Item Styles */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 2px solid var(--border-color);
+}
+ul:first-child {
+  padding: 0;
+}
+ul:last-child {
+  border: none;
+}
+ul li {
+  padding: 8px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+ul li:not(.active) {
+  color: var(--text-color);
+  font-weight: 600;
+  font-size: 14px;
+}
+ul li.active,
+ul li:hover {
+  border-radius: 10px;
+  background: var(--secondary-color);
+  color: var(--hover-color);
+  transition: 0.2s linear all;
+}
+ul li i {
+  width: 20px;
+}
+ul li span {
+  padding: 0 10px;
+}
+/* Menu user styles */
+.user {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.user .avatar img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user h4 {
+  margin: 5px 0;
+}
+.user .user-details {
+  padding: 0 10px;
+  font-size: 14px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+/* Theme styles */
+
+.themes {
+  display: flex;
+  justify-content: center;
+}
+.themes .light,
+.themes .dark,
+.themes .purple {
+  padding: 10px;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  margin: 5px;
+  cursor: pointer;
+  border: 1px solid #ab9e9e;
+}
+.themes .light {
+  background-color: #fff;
+}
+.themes .dark {
+  background-color: #1d2f59;
+}
+.themes .purple {
+  background-color: #6b62b9;
+}
+
+/* Responsive menu styles */
+.menu-responsive {
+  width: 50px;
+  align-items: center;
+}
+.menu-responsive header h3,
+.menu-responsive ul li span,
+.menu-responsive .user-details {
+  display: none;
+}
+.menu-responsive input {
+  width: 0;
+}
+.menu-responsive ul li {
+  position: relative;
+  font-size: 18px;
+  padding: 6px;
+}
+
+.menu-responsive ul li:hover > span {
+  display: flex !important;
+  position: absolute;
+  background: var(--primary-color);
+  border-radius: 5px;
+  left: 60px;
+  top: 5px;
+  box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+  font-size: 14px;
+  padding: 5px 15px;
+  color: var(--text-color);
+}
+
+/* Responsive Theme styles */
+.menu-responsive .themes .light,
+.menu-responsive .themes .dark,
+.menu-responsive .themes .purple {
+  padding: 5px;
+  margin: 2px;
+}
+
+/* Responsive Header Menu and Collapsable menu styles */
+.menu-responsive header .menu-icon {
+  display: none;
+}
+.menu-responsive header .collapse-icon {
+  display: flex !important;
+  position: absolute;
+  background: var(--primary-color);
+  border-radius: 50%;
+  left: 52px;
+  top: -10px;
+  box-shadow: 0 3px 1px -2px #0003, 0 2px 2px #00000024, 0 1px 5px #0000001f;
+  font-size: 14px;
+  color: var(--text-color);
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.menu-responsive header .collapse-icon i {
+  transform: rotate(270deg);
+  cursor: pointer;
+}
