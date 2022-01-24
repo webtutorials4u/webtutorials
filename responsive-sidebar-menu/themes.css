@@ -1,18 +1,18 @@
 body.dark-theme {
   --primary-color: #1d2f59;
   --secondary-color: #3f578fcc;
+  --border-color: #ababab;
   --hover-color: #fff;
   --text-color: #f3f3f3a6;
   --input-bg-color: #384f84;
-  --border-color: #ababab;
   --input-text-color: #fff;
 }
 body.light-theme {
   --primary-color: #fff;
   --secondary-color: #0183ff;
   --border-color: #eee;
-  --text-color: #090e18a6;
   --hover-color: #fff;
+  --text-color: #090e18a6;
   --input-bg-color: #f6f6f6;
   --input-text-color: #090e18a6;
 }
@@ -20,8 +20,8 @@ body.purple-theme {
   --primary-color: #6b62b9;
   --secondary-color: #ffffff;
   --border-color: #ababab;
-  --text-color: #f3f3f3a6;
   --hover-color: #6b62b9;
+  --text-color: #f3f3f3a6;
   --input-bg-color: #c3c0df;
   --input-text-color: #fff;
 }
