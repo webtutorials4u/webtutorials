@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="themes.css" />
   </head>
-  <body class="dark-theme">
+  <body class="light-theme">
     <main>
       <div class="menu" id="menu">
         <!-- Menu header starts here -->
@@ -17,6 +17,8 @@
             <i class="fas fa-chevron-down"></i>
           </div>
         </header>
+        <!-- Menu search input starts here -->
+
         <div class="input-content">
           <i class="fas fa-search"></i>
           <input type="text" placeholder="Search..." />
@@ -54,15 +56,16 @@
             <span>Web Designer</span>
           </div>
         </div>
-        <div>
-          <div class="themes">
-            <span class="light" onclick="changeTheme('light-theme')"></span>
-            <span class="dark" onclick="changeTheme('dark-theme')"></span>
-            <span class="purple" onclick="changeTheme('purple-theme')"></span>
-          </div>
+
+        <!-- Theme buttons starts here -->
+        <div class="themes">
+          <span class="light" onclick="changeTheme('light-theme')"></span>
+          <span class="dark" onclick="changeTheme('dark-theme')"></span>
+          <span class="purple" onclick="changeTheme('purple-theme')"></span>
         </div>
       </div>
     </main>
+
     <script>
       let isToggleMenu = false;
       function changeTheme(themeColor) {
